@@ -9,8 +9,8 @@
     <body>
         <div>
             Microblog:
-            <a href="/index">Home</a>
-            <a href="/login">Login</a>
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('login') }}">Login</a>
         </div>
         <hr>
         {% with messages = get_flashed_messages() %}
@@ -24,4 +24,8 @@
         {% endwith %}
         {% block content %}{% endblock %}
     </body>
+    <div style="position: absolute; bottom: 5px;">
+        <hr>
+        A Flask website by David Saunders
+    </div>
 </html>
