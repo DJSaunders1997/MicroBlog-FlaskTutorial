@@ -21,7 +21,7 @@ def index():
 		},
 		{
 			'author': {'username': 'Dave'},
-			'body':	'What on earth should I do with my life now that my dissertation is done? '
+			'body':	'What on earth should I do with my life now that my dissertation is done?'
 		}
 	]
 
