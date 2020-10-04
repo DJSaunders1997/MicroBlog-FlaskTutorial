@@ -22,6 +22,12 @@ class RegistrationForm(FlaskForm):
         if user is not None:
             raise ValidationError('Please use a different username.')
 
+    # Custom validation function - Dave
+    # If Password is password then complain
+    def validate_password(self, password):
+        if (password.data == 'password') or (password.data == 'Password') :
+            raise ValidationError('Don\t be lazy! Think of a password other than password😡')
+
     def validate_email(self, email):
         user = User.query.filter_by(email=email.data).first()
         if user is not None:
